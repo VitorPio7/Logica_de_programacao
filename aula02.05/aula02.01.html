@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica de probramacao javascript</title>
+</head>
+<body>
+    <h1>Lógica de programacao com javascript</h1>
+    <script>
+       var jogador1 = parseInt(prompt("jogador1: digitar um numero"))
+       var jogador2 =parseInt(prompt("jogador2: digitar um numero")) 
+
+       if(jogador1===jogador2){
+          alert("empate")
+       }else{
+         var sorteio = parseInt(Math.random()*2)
+         if(sorteio ==0){
+            if(jogador1<jogador2){
+                alert("jogador1 ganhou")
+            }else{
+                alert("jogador2 ganhou")
+            }
+         }else if(sorteio == 1){
+            if(jogador1>jogador2){
+                alert("jogador1 ganhou")
+            }else{
+                alert("jogador2 ganhou")
+            }
+         }
+       }
+
+
+    </script>
+</body>
+</html>
