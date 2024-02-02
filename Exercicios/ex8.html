@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>Lógica de programção em javaScript</h1>
+
+  <button onclick="somar()">+</button>
+  <button onclick="subtrair()">-</button>
+  <button onclick="multiplicar()">*</button>
+  <button onclick="dividir()">/</button>
+  <div id="output"></div>
+ 
+    <script> 
+    var n1 =parseFloat(prompt("Digite um número")) 
+
+    escreve();
+
+   function escreve(){
+     var output = document.querySelector('#output');
+     output.innerHTML = n1;
+   }
+  
+    function somar(){
+      var numSoma= parseFloat(prompt("Digite um numero para somar"))
+      n1 = n1+numSoma
+      escreve()
+    }
+    function subtrair(){
+      var numSubtrair= parseFloat(prompt("Digite um numero para subtrair"))
+      n1 = n1-numSubtrair
+      escreve()
+    }
+    function multiplicar(){
+      var numMultiplicar = parseFloat(prompt("Digite um numero para multiplicar"))
+      n1 = n1*numMultiplicar
+      escreve()
+    } 
+    function dividir(){
+    
+      var numDividir = parseFloat(prompt("Digite um numero para dividir"))
+      n1 = n1/numDividir
+      escreve()  
+    }
+   </script>
+</body>
+</html>

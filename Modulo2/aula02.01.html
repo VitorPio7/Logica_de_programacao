@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logica de probramacao javascript</title>
 </head>
-<body>
+ <body>
     <h1>Lógica de programacao com javascript</h1>
+    <div id="output">Ola</div>
     <script>
-       var numero = prompt('Digite um número')
-       numero = parseFloat(numero);
-       for(let i = 0;i<1000;i++){
-         document.write(numero+" X "+i+" = "+(numero*i)+"<br>");
+       var output = document.querySelector('#output');
+       var mensagem = '';
+       for(let i = 0;i<1001;i++){
+          mensagem+='i: '+i+'<br>';
        }
+       output.innerHTML = mensagem
     </script>
-</body>
+  </body>
 </html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>Lógica de programção em javaScript</h1>
+
+  <button onclick="calcular('+')">+</button>
+  <button onclick="calcular('-')">-</button>
+  <button onclick="calcular('*')">*</button>
+  <button onclick="calcular('/')">/</button>
+  <div id="output"></div>
+ 
+    <script> 
+    var n1 =parseFloat(prompt("Digite um número")) 
+    escreve(n1);
+
+    function executarCalculo(sinal){
+        var n1 = document.querySelector('#output').textContent
+        var n2 = prompt('digite outro número');
+        n2 = parseFloat(n2);
+       var msg = calcular(sinal,n1,n2)
+       escreve(msg);
+    }
+
+   function escreve(numero){
+     var output = document.querySelector('#output');
+     output.innerHTML = numero;
+   }
+   
+   function calcular(sinal,n1,n2){
+    var operacao = null;
+    switch(sinal){
+        case '+':
+            operacao= n1+n2;
+            break;
+        case '-':
+            operacao=n1-n2;
+            break;
+        case '*':
+            operacao=n1*n2;
+            break;
+        case '/':
+            operacao=n1/n2 
+            break    
+    }
+    return operacao
+   }
+    
+   </script>
+</body>
+</html>
