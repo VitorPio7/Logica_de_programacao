@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1 id="res">Reasultado</h1>
+     <button id="btn1" >mostrar no Alert</button> 
+      <button id="btn2">mostrar na Página</button>
+    <script>
+        const btn1 = document.querySelector("#btn1")
+        const btn2 = document.querySelector("#btn2")
+        const res = document.querySelector("#res")
+        btn1.addEventListener("click",(elt)=>{
+             mostrarAlert()
+        })
+        btn2.addEventListener("click",(elt)=>{
+             mostrarPagina()
+        })
+
+        function mostrarAlert(){
+          info();
+          var mult = parseFloat(n1*n2)
+          alert("A área do retângulo é "+mult)
+        }
+        function mostrarPagina(){
+          info()  
+          var mult = parseFloat(n1*n2)
+          res.innerHTML = mult
+        }
+        function info(){
+          var n1 = parseFloat(prompt("Digite o primeiro número"))
+          var n2 = parseFloat(prompt("Digite o segundo número")) 
+        }
+    </script>
+</body>
+</html>

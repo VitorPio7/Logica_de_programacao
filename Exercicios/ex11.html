@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="variavel()">inserir lado</button>
+    <h1 class="res"></h1>
+    <script>
+           const res = document.querySelector(".res") 
+            segundaVariavel()
+
+            function segundaVariavel(){
+                 
+             const num1 = parseFloat(prompt("digite o primeiro lado"));
+             const num2 = parseFloat(prompt("digite a segunda variavel"));
+             const calculo = parseFloat(num1*num2);
+             if(isNaN(num1)||isNaN(num2)){
+                 throw new Error("Digite um numero válido")
+             }else{
+                 res.innerHTML = calculo 
+             }
+                 
+          }
+          
+
+
+    </script>
+</body>
+</html>
