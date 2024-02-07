@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lógica de promação com Javascript</h1>    
+</body>
+<script>
+    var dias = new Array('domingo','segunda',
+    'terça','quarta','quinta','sexta','sábado')
+    var hoje = new Date()
+    var diaSemana = hoje.getDay();
+    switch(diaSemana){
+        case 0:
+        alert('Bem vindo hoje é Domingo');
+        break;
+        case 1:
+        alert('Bem vindo hoje é Segunda');
+        break;
+        case 2:
+        alert('Bem vindo hoje é Terça');
+        break;
+        case 3:
+        alert('Bem vindo hoje é Quarta');
+        break;
+        case 4:
+        alert('Bem vindo hoje é Quinta');
+        break;
+        case 5:
+        alert('Bem vindo hoje é Sexta');
+        break;
+        case 6:
+        alert('Bem vindo hoje é Sabado');
+        break;
+        
+    }
+    
+</script>
+</html>
