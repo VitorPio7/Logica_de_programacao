@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+
+    <script>
+        var produto1 = new Object();
+        produto1.nome = "caneta preta";
+        produto1.valor = 2.50;
+        produto1.quantidade = 12;
+        produto1.comprar = function(qtd){
+            if(!qtd){
+                qtd = 1;
+            }if(quantidade<=0||this.quantidade<qtd){
+                alert("Produto não tem a quandidade necessária em estoque")
+            }
+            this.quantidade= this.quantidade -qtd;
+        }
+        
+        let quantidade = parseInt(prompt("Informe a quantidade desejada: "))
+        produto1.comprar(quantidade)
+        var msg = '';
+        msg += 'nome: '+produto1.nome+'<br>'
+        msg += 'preco: '+produto1.valor+'<br>'
+        msg += 'estoque: '+produto1.quantidade+'<br>'
+        document.querySelector('#output').innerHTML = msg;
+    
+   </script>
+    
+</body>
+</html>

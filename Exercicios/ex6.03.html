@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        var dados = new Array({"nome":"Vitor Pio Viera","idade":22},
+        {"nome":"Marinalva Pio Vieira","idade":49},{"nome":"Inacio Pio","idade":94})
+        
+        var mensagem = " "
+        // for(var i = 0;i<dados.length;i++){
+        //  mensagem +=`nome: ${dados[i].nome}</br>`
+        //  mensagem +=`idade: ${dados[i].idade}</br>`
+        // }
+        var i = 0
+        while(dados[i]){
+            mensagem +=`nome: ${dados[i].nome}</br>`
+            mensagem +=`idade: ${dados[i].idade}</br>`
+            i++;  
+        }
+        document.getElementById("output").innerHTML = mensagem; 
+        
+    </script>
+</body>
+</html>
