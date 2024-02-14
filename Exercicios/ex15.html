@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           font-family: sans-serif; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Loteria</h1>
+    <div id="output"></div>
+
+    <script>
+     function sortear(){
+        return Math.floor(Math.random()*60);
+     }
+     var sorteados = [];
+
+     while(sorteados.length<6){
+        var numero = sortear()
+        if(sorteados.indexOf(numero)===-1){
+            sorteados[sorteados.length] = numero
+        }
+
+     }
+     console.log(sorteados)
+    </script>
+    
+</body>

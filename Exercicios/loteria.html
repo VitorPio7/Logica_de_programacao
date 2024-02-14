@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           font-family: sans-serif; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Loteria</h1>
+    <div id="output"></div>
+
+    <script>
+        
+        sorteios = function(){
+            return Math.floor(Math.random*60)
+        }
+        let sorteio = [];
+         
+        while(sorteio.length<6){
+            if(sorteio.indexOf(sorteios)===1){
+                sorteio[sorteio.length] = sorteios;
+            }
+        }
+        console.log(sorteio)
+
+    </script>
+    
+</body>
+</html>
