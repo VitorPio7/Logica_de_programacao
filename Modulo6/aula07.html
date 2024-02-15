@@ -11,31 +11,35 @@
 
     <script>
         var notas = [[5,6,4,3],[2,8,5,6],[3,6,4,8],[2,8,4,9]];
-        let soma = 0;
-        function calcularAno(){
-            var mediaAnual = 0
-            for(var i = 0;i<notas.length;i++){
-            for(var j = 0;j<notas[i].length;j++){
-                    soma+=notas[i][j]
+        
+    
+        function mediaTotal(arr){
+            var soma = 0;
+            var media_total = 0;
+            for(var i = 0;i<arr.length;i++){
+                for(var j = 0;j<arr[i].length;j++){
+                   soma+=arr[i][j]
                 }
-            }      
-              return mediaAnual=soma/16
+                media_total = soma/16
+            } 
+            return media_total     
         }
-
-        var periodo = parseInt(prompt("Digite o periodo"))
-
-        function calcularSemestre(semestre){
-            var mediaSemestre = 0
-            for(var j =0;j<5;j++){
-                soma+=notas[semestre][j]
+      
+        
+        function mediaAtual(arr,periodo){
+            var soma = 0;
+            var media_atual=0;      
+            for(var i = 0;i<arr[periodo].length;i++){
+                soma+=arr[periodo][i]
             }
-              return mediaSemestre = soma/4
-               
-       }
- 
-        var msg = "Nota do semestre: "+calcularSemestre(periodo)+"</br>"
-         msg+="Nota anual: "+calcularAno()  
-
+             media_atual = soma/arr.length
+             return media_atual 
+        }
+        var msg = ""
+        msg+=`A media Total é: ${mediaTotal(notas)}<br> `
+        msg+=`A media do semestre é: ${mediaAtual(notas,2)}<br> `
+          
+         
         document.querySelector('#output').innerHTML = msg
     </script>
     
