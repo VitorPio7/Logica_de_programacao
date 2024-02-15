@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lógica de programação com Javascript</h1>
+    <div id="output"></div>   
+
+    <script>
+        var notas = [[5,6,4,3],[2,8,5,6],[3,6,4,8],[2,8,4,9]];
+        let soma = 0;
+        function calcularAno(){
+            var mediaAnual = 0
+            for(var i = 0;i<notas.length;i++){
+            for(var j = 0;j<notas[i].length;j++){
+                    soma+=notas[i][j]
+                }
+            }      
+              return mediaAnual=soma/16
+        }
+
+        var periodo = parseInt(prompt("Digite o periodo"))
+
+        function calcularSemestre(semestre){
+            var mediaSemestre = 0
+            for(var j =0;j<5;j++){
+                soma+=notas[semestre][j]
+            }
+              return mediaSemestre = soma/4
+               
+       }
+ 
+        var msg = "Nota do semestre: "+calcularSemestre(periodo)+"</br>"
+         msg+="Nota anual: "+calcularAno()  
+
+        document.querySelector('#output').innerHTML = msg
+    </script>
+    
+    
+</body>
+</html>
