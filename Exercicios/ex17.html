@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lógica de programação com Javascript</h1>
+    <script>
+        var arr = [1,3,6,9];
+        var arrDobrado=dobrar(arr);
+        
+        function dobrar(arr){
+            var arrTemp = arr;
+            for(var i = 0;i<arrTemp.length;i++){
+                arrTemp[i] = arrTemp[i]*2;
+            }
+            return arrTemp;
+        }
+        console.log(arr)
+        console.log(arrDobrado)
+        
+
+    </script>
+</body>
+</html>
