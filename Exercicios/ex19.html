@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1,1,2,3,5,8
+        function fibonacci(n){
+            if(n<=2){
+                return 1
+            }
+            return fibonacci(n-1)+fibonacci(n-2)
+        }
+
+        console.log(fibonacci(6))
+
+        var a = 1;
+        var b = 0;
+        var prop; 
+        function fibonacci2(n){
+         while(n--){
+            prop = a;
+            a = a+b;
+            b = prop
+         }
+         return b
+        }
+
+    </script>
+</body>
+</html>
